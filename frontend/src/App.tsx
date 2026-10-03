@@ -88,6 +88,129 @@ export const App: React.FC = () => {
 
       {/* Main Workspace Container */}
       <main className="max-w-[1440px] mx-auto px-4 py-5 space-y-5">
+        {/* Centered Modal Loader Overlay */}
+        {isLoading && (
+          <div
+            style={{
+              position: 'fixed',
+              inset: 0,
+              backgroundColor: 'rgba(15, 23, 42, 0.7)',
+              backdropFilter: 'blur(5px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 99999,
+              padding: '1.25rem',
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: '#ffffff',
+                borderRadius: '16px',
+                padding: '2.5rem 2rem',
+                maxWidth: '480px',
+                width: '100%',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                border: '1px solid #e2e8f0',
+                textAlign: 'center',
+              }}
+            >
+              {/* Spinner with Truck Icon */}
+              <div
+                style={{
+                  position: 'relative',
+                  width: '64px',
+                  height: '64px',
+                  margin: '0 auto 1.25rem',
+                }}
+              >
+                <div
+                  className="animate-spin"
+                  style={{
+                    width: '64px',
+                    height: '64px',
+                    borderRadius: '50%',
+                    border: '4px solid #dbeafe',
+                    borderTopColor: '#2563eb',
+                  }}
+                />
+                <Truck
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '26px',
+                    height: '26px',
+                    color: '#1d4ed8',
+                  }}
+                />
+              </div>
+
+              {/* Title & Description */}
+              <h3
+                style={{
+                  fontSize: '1.25rem',
+                  fontWeight: 700,
+                  color: '#0f172a',
+                  marginBottom: '0.5rem',
+                }}
+              >
+                Calculating Route &amp; HOS Compliance
+              </h3>
+
+              <p
+                style={{
+                  fontSize: '0.875rem',
+                  color: '#475569',
+                  lineHeight: 1.55,
+                  marginBottom: '1rem',
+                }}
+              >
+                Geocoding waypoints, querying OSRM highway coordinates, and generating FMCSA 49 CFR § 395 daily driver logs...
+              </p>
+
+              <p
+                style={{
+                  fontSize: '0.75rem',
+                  color: '#94a3b8',
+                  marginBottom: '1.25rem',
+                }}
+              >
+                Connecting to live backend. Please wait a moment while the calculations finish.
+              </p>
+
+              {/* Status Badge */}
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  backgroundColor: '#eff6ff',
+                  color: '#1e40af',
+                  padding: '0.375rem 0.875rem',
+                  borderRadius: '9999px',
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  border: '1px solid #bfdbfe',
+                }}
+              >
+                <span
+                  className="animate-pulse"
+                  style={{
+                    width: '8px',
+                    height: '8px',
+                    borderRadius: '50%',
+                    backgroundColor: '#2563eb',
+                    display: 'inline-block',
+                  }}
+                />
+                Live Dispatch Engine Running
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Error Alert Banner */}
         {error && (
           <div className="p-4 bg-rose-50 border border-rose-300 rounded-lg text-xs text-rose-800 flex items-start justify-between gap-3 shadow-sm print:hidden">
