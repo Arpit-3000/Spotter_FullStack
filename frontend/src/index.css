@@ -46,10 +46,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Custom Map Marker styles */
+/* Custom Map Marker styles & Leaflet Container */
 .custom-map-pin {
   background: transparent;
   border: none;
+}
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+  z-index: 1;
+}
+
+.h-full {
+  height: 100%;
 }
 
 /* Grid & Layout Utilities */
