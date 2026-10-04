@@ -9,7 +9,7 @@ A full-stack logistics application that calculates driving routes, plans FMCSA H
 - **Frontend (Vercel):** [https://spotter-full-stack-eta.vercel.app/](https://spotter-full-stack-eta.vercel.app/)
 - **Backend API (Render):** [https://spotter-fullstack-tzvu.onrender.com](https://spotter-fullstack-tzvu.onrender.com)
 - **API Health Check:** [https://spotter-fullstack-tzvu.onrender.com/api/v1/trips/health/](https://spotter-fullstack-tzvu.onrender.com/api/v1/trips/health/)
-- **Loom Demo Video:** `[Add your Loom Video URL here]`
+- **Loom Demo Video:** `https://www.loom.com/share/476eeb145ced463fa2f456862a6f0615`
 
 ---
 
